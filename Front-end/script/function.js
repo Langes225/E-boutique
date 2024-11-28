@@ -137,6 +137,7 @@ export const genererUnProduit = (product) => {
 	`
 }
 
+// Création d'une fonction pour tester si le produit existe
 export const testerSiProduitExiste = (arr, product) => {
 	const el = arr.find(p => p.id === product.id)
 	return el ? true : false;
