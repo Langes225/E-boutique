@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Services | e-commerce </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+    <body>
+        <main>
+			<header>
+			    <!-- position du logo -->
+			    <div class="logo">
+				<i class="fa-solid fa-truck-fast"></i>
+				<p>shoppingfya</p>
+			    </div>
+			    <!-- barre de navigation -->
+			    <nav>
+				    <ul>
+					    <li><a href="#" class="liens" >Home</a></li>
+					    <li><a href="#"  class="liens">Ventes</a></li>
+					    <li><a href="#" class="liens">About</a></li>
+				    </ul>
+		        </nav>
+		        <!-- barre de recherche des produits -->
+		        <form>
+			        <input type="text" name="nom" id="" class="recherche" placeholder="rechercher le produit..." />
+			        <button>
+				        <i class="fa-solid fa-magnifying-glass"></i>
+			        </button>
+		        </form>
+		        <!-- partie permettant au user de faire quelques actions  -->
+		        <div class="actions">
+				    <div class="carte">
+		            <!-- faire ses achats -->
+				        <i class="fa-solid fa-cart-shopping"></i>
+			            <div class="nombre">4</div>
+                    </div>
+                    <!-- Permet aux utilisateurs de liker -->
+			        <div class="love">
+				        <i class="fa-regular fa-heart"></i>
+			        </div>
+			        <!-- photo de profil du user -->
+			        <div class="user">
+				        <img src="./images/profil/langevin.jpg" alt="langes">
+			        </div>
+                </div>    
+			</header>
+            <div class="main-content">
+                <!-- section filtrage des produits -->
+                <section class="filtre">
+                    <!-- retour à la page d'acceuil -->
+                    <div class="breadcumb">
+                        <i class="fa-solid fa-house"></i>
+                        <!-- page suivante -->
+                        <p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            acceuil
+                        </p>
+                    </div>
+                    <div class="filtre-produits">
+                        <button>
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+                    <!-- <div class="options"> -->
+                        <!-- <p class="item">coumbow</p> -->
+                        <!-- <p class="item">swag</p> -->
+                        <!-- <p class="item">general</p> -->
+                    <!-- </div> -->
+                </section>
+                <!--Affichage  de tous les produits  -->
+                <section class="produits"></section>
+                <!-- Affichage de la box-dialog qui contient le produit selectionné -->
+                <dialog class="one-produit">
+                    <button class="btn-fermer">
+                        <i class="fa-solid fa-times"></i>
+                        <p>Fermer</p>
+                    </button> 
+                </dialog>
+            </div>
+        </main>
+        <script type="module" src="./app.js"></script>
+    </body>
+</html>

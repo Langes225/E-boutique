@@ -1,0 +1,97 @@
+{
+	"chapeaux":	[
+		{
+			"id": 1,
+			"img": "./images/chapeau_1.png",
+			"nom": "chapeau de paille",
+			"prix": 10,
+			"description": "humour autain à la jules verne",
+			"categorie": "homme"
+		},
+	
+		{
+			"id": 2,
+			"img": "./images/chapeau_2.png",
+			"nom": "chapeau en satin",
+			"prix": 7,
+			"description": "humour autain à la jules jerry",
+			"categorie": "homme"
+		},
+		{
+			"id": 3,
+			"img": "./images/chapeau_3.png",
+			"nom": "chapeau de soie",
+			"prix": 7,
+			"description": "humour autain à la jesse jerry",
+			"categorie": "homme"
+		},
+	
+		{
+			"id": 4,
+			"img": "./images/chapeau_4.png",
+			"nom": "chapeau de soie doux",
+			"prix": 10,
+			"description": "humour autain à la cocase",
+			"categorie": "homme"
+		},
+		{
+			"id": 5,
+			"img": "./images/chapeau_5.png",
+			"nom": "chapeau de melon",
+			"prix": 5,
+			"description": "humour autain à l'occidental",
+			"categorie": "homme"
+		},
+		{
+			"id": 6,
+			"img": "./images/chapeau_6.png",
+			"nom": "chapeau a bord rond",
+			"prix": 3,
+			"description": "pour le travail",
+			"categorie": "homme"
+		},
+		{
+			"id": 7,
+			"img": "./images/chapeau_7.png",
+			"nom": "chapeau a bord rond",
+			"prix": 3,
+			"description": "pour le travail",
+			"categorie": "homme"
+		},
+		{
+			"id": 8,
+			"img": "./images/chapeau_8.png",
+			"nom": "casquette",
+			"prix": 11,
+			"description": "pour le sport",
+			"categorie": "homme"
+		},	
+		{
+			"id": 9,
+			"img": "./images/chapeau_9.png",
+			"nom": "couvre chef",
+			"prix": 5,
+			"description": "pour les balades",
+			"categorie": "homme"
+		},
+		{
+			"id": 10,
+			"img": "./images/chapeau_10.png",
+			"nom": "kepi",
+			"prix": 2,
+			"description": "humour autoritaire",
+			"categorie": "homme"
+		}	
+	],
+	"avis": [
+		{
+			"id": 1,
+			"chapeauid": 1,
+			"utilisateur": "Kristen Larson",
+			"commentaire": "illum somu natus komin",
+			"nbEtoiles": 4
+		}
+
+
+	]
+}

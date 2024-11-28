@@ -1,0 +1,1194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/* Réinitialisation de la page */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Déclaration des variales (couleur, style, police) utilisées dans le projet */
+html{
+	--var-bg-color-d: #f0f3f5;
+	--var-bg-color-b: #aecfe2;
+	--var-bg-secoundary: #4b568a;
+	--var-bg-tertiaire:#3131e2;
+	--var-color-text: #ffffff;
+	--var-secoudary-color-text:#000000e8;
+	--var-bg-color-mix: #ff0000;
+	--var-bg-light: #c34444;
+	--var-bg-dark: #7e2323;
+}
+
+/* Affichage de la page */
+body{
+	background-color: var(--var-bg-color-b);
+	font-family: 'poppins', sans-serif;
+	height: 100vh;
+}
+main{
+	width: 100%;
+	margin: auto;
+}
+/* Affichage du header */
+main header {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--var-color-text);
+	box-shadow: 0px 1px 3px rgba(57, 51, 51, 0.5);
+	z-index: 100;
+}
+/* Affichage du logo */
+header .logo{
+	width: 11rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	margin-left: 1rem;
+	/* border: 1px solid blue; */
+	padding: 10px 20px;
+}
+/* Affichage de l'icone du logo */
+header .logo i{
+	color: var(--var-bg-dark);
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+/* Affichage du nom de l'entreprise */
+header .logo p{
+	color: var(--var-bg-light);
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+/* Affichage de la barre de navigation  */
+header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px  ;
+}
+
+/* Disposition des différents liens dans la barre navigation */
+header nav ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5rem;	
+}
+
+/* Suppression de la liste à puce des liens */
+nav ul li {
+	list-style-type: none;
+	font-size: 1.2rem;
+}
+
+/* Suppression du sous-lignement des liens et ajout d'une couleur texte */
+nav ul .liens {
+	text-decoration: none;
+	color: var(--var-bg-secoundary);
+}
+
+/* Comportement des liens lorsqu'ils sont survolés par la souris */
+nav ul .liens:hover {
+	color: var(--var-bg-tertiaire);
+	transition: 0.3s ease;
+	font-weight: 500;
+}
+
+/* Mise en forme de la barre de recherche d'un produit */
+header form {
+	width: 20rem;
+	height: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+/* Mise en forme de la saisie */
+header form input {
+	width: 16rem;
+	height: 1.2rem;
+	/* border: none;  */
+	resize: none;
+	/* outline: none; */
+	padding-left: 0.9rem;
+	font-size: 1rem;
+	background-color: var(--var-bg-color);
+	font-weight: 400;
+	border-radius: 0.3rem;
+}
+
+/* mise en forme la barre de saisie lorsqu'elle est active*/
+header form input:focus {
+	background-color: var(--var-bg-color);
+	color: #010700ff;
+	font-size: 1rem;
+}
+
+/* Mise en forme du bouton de recherche*/
+header form button{
+	width: 1.3rem;
+	height: 1.2rem;
+	/* border: none; */
+	border-top-right-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+	background-color: #1d1e1ea2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	right: 2rem;
+	/* border: 1px solid red; */
+	position: absolute;
+	padding-top: 0.1rem;
+	padding-left: 0.2rem;
+	/* margin-right: 0rem; */
+}
+
+/* Mise en forme de l'icon de recherche */
+header form button i{
+	font-size: 1rem;	
+}
+
+/* Mise en forme la partie action */
+header .actions {
+	height: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 3rem;
+	width: 10rem;
+	padding: 5px 10px;
+	position: relative;
+}
+.actions .carte {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	width: 1rem;
+	height: 1rem;
+}
+/* Mise en forme de l'icone des courses  */
+.actions .carte i {
+	color: var(--var-bg-tertiaire); 
+	font-weight: 900;
+	font-size: 1rem;
+	cursor: pointer;
+
+}
+
+/* Mise en forme du nombre de course */
+.carte .nombre {
+	/* position: absolute; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--var-color-text);
+	font-weight: 200;
+	font-size: 0.7rem;
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 5px;
+	background-color: #36484c;
+}
+
+/* Mise en forme de l'icone de like */
+header .actions .love i{
+	color: var(--var-bg-dark);
+	font-size: 1rem;
+}
+
+/* Mise en forme du profil utilisateur */
+.actions .user img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+/* Mise en forme du contenu page */
+main .main-content {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between ;
+	align-items: center;
+	padding-top: 0.8rem;
+	/* padding-left: 10px; */
+	position: relative;
+	font-family: "Playfair Display", sans-serif;
+}
+
+/* Mise en forme de la section filtre */
+main .main-content .filtre {
+	position: sticky;
+	top: 60px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--var-bg-color);
+	/* backdrop-filter: blur(25px); */
+	box-shadow: 0 0.3px 3ch rgba(57, 51, 51, 0.2);
+	z-index: 100;
+}
+
+/* Mis en forme du filtre accueil */
+.main-content .filtre .breadcumb {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+
+/* Mise en forme de l'icone Acceuil */
+.filtre .breadcumb > i {
+	width: 2rem;
+	/* border: 2px solid red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s ease;
+	color: var(--var-bg-tertiaire);
+	margin-left: 0.8rem;
+}
+
+/* Mise en forme de l'icone lorsque la souris la souris la survole */
+.filtre .breadcumb >i:hover {
+	color: var(--var-bg-secoundary);
+}
+
+/* Mise en forme du texte acceuil */
+.filtre .breadcumb p{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.3rem;
+	color:var(--var-bg-tertiaire);
+	transition: 0.5s ease;
+	cursor: pointer;
+}
+
+/* Mise en forme de l'icone chevron */
+.breadcumb p:hover {
+	color: var(--var-bg-secoundary);
+}
+
+/* Mise en forme du chevron droite lorsque la souris le survole */
+.breadcumb p i:hover {
+	color: var(--var-bg-secoundary);
+	transition: 0.5s ease;
+}
+
+/* Mise en forme du container filtre des produits */
+.main-content .filtre-produits {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	margin-right: 20px;
+}
+
+/* Mise en forme bouton filtre-produits */
+.filtre-produits button {
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: var(--var-secoudary-color-text);
+	border: none;
+	resize: none;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	transition: 0.5s ease;
+	/* margin-right: 3rem; */
+}
+
+/* Mise en forme de l'icone filtre */
+.filtre-produits button i {
+	color: var(--var-color-text);
+	font: 1.2rem;
+}
+
+/* Mise en forme du bouton survolé par la souris */
+.filtre-produits button:hover {
+	background-color: var(--var-bg-secoundary);
+}
+
+/* Mise en forme de l'icone filtre survolé par la souris */
+.filtre-produits button i:hover{
+	color: var(--var-secoudary-color-text);
+}
+
+/* Affichage des produits dans la classe produits*/
+main .main-content .produits{
+	width: 90%;
+	margin: auto;
+	/* position: absolute; */
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+	/* border: 1px solid black; */
+	margin-top: 55px;
+}
+
+/* Affichage de chaque produit dans la classe carte-produit */
+.produits .carte-produit {
+	width: 100%;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	background-color: var(--var-color-text);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+	/* border: 1px solid green;*/
+
+}
+
+/* Position de la sous-classe img dans la classe carte-produit */
+.carte-produit .img {
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	/* border: 2px solid blue; */
+}
+
+/* Position de l'image dans la classe img */
+.img img{
+	width: 10rem;
+	height: 10rem;
+	display: flex;
+	align-items: center;
+	/* border: 1px solid red; */
+}
+
+
+/* position de la classe icons dans la classe img */
+.img .icons {	
+	width: 100%;
+	height: 40px;
+	/* border: 1px solid black; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.1rem;
+}
+
+/* Position de la classe first par rapport à son parent direct la classe icons */
+.icons .first {
+	width: 4rem;
+	height: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid rgb(17, 211, 30); */
+	padding: 0.5rem;
+}
+
+
+/* Position de la balise i par rapport à son parent direct first */
+.icons .first i {
+	width: 2rem;
+	height: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+/* position des enfants directs i de first */
+.icons .first i:nth-child(1) {
+	color: #e31818d3;
+}
+
+/*  */
+.icons .first i:nth-child(2) {
+	color: #0000ffef;
+}
+
+/* Position de la sous-classe last par rapport à son parent direct icons */
+.icons .last {
+	width: 3rem;
+	height: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid rgb(44, 63, 5); */
+	/* padding-right: 0.5rem; */
+	position: relative;
+}
+
+/* Position de la balise i par rapport à son parent direct last */
+.icons .last i {
+	position: absolute;
+	right: 0.5rem;
+	color: yellow;
+}
+
+/* Position de la balise p par rapport à son parent direct last */
+.icons .last p {
+	position: absolute;
+	right: 0.5rem;
+	top: 1.5rem;
+	font-size: 0.8rem;
+}
+	
+/* Affichage de la classe text dans la classe parent carte-produit */
+.carte-produit .text {
+	width: 90%;
+	height: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: first baseline;
+	/* border: 1px solid green; */
+	margin-bottom: 1rem;
+}
+
+/* Position de la classe nom dans sa classe parent direct text */
+.text .nom {
+	font-size: small;
+	color: var(--var-secoudary-color-text);
+	font-weight: 500;
+}
+
+/* position de la balise titre h3 dans sa classe parent direct text */
+.text h3{
+	font-size: small;
+}
+
+/* Affiche de la classe footer dans sa classe parent direct carte-produit */
+.carte-produit .footer {
+	width: 90%;
+	height: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: #7e2323 solid 1px; */
+	margin-bottom: 0.1rem;
+}
+
+/*  */
+.footer .prix {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*  */
+.prix .prix-actuel{
+	color: red;
+	font-size: 1rem;
+}
+
+/*  */
+.footer .color{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+/*  */
+.color .item-color {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+}
+
+/*  */
+.item-color:nth-child(1) {
+	background-color: #ff0000;
+}
+
+/*  */
+.item-color:nth-child(2) {
+	background-color: #0000ff;
+}
+
+/*  */
+.item-color:nth-child(3) {
+	background-color: #40403e;
+}
+
+/*  */
+.produits .carte-produit-vide {
+	/* border: 1px solid gray; */
+	display: block;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 35rem;
+}
+
+/*  */
+.carte-produit-vide h3 {
+	text-align: center;
+	color: red;
+	font-size: 2rem;
+}
+
+/*  */
+.main-content .one-produit {
+	margin: auto;
+	border: 0.5px solid rgba(128, 128, 128, 0.672);
+	border-radius: 5px;
+	resize: none;
+	outline: none;
+	border: none;
+	background-color: var(--var-bg-color-d)
+}
+
+/*  */
+.one-produit .btn-fermer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+	background-color: var(--var-color-text);
+	transition: 0.3s ease;
+	cursor: pointer;
+	border-radius: 5px;
+	border:none;
+	resize: none;
+	outline:none;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+
+
+} 
+
+/*  */
+.one-produit .btn-fermer i{
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	font-size: 1rem;
+	z-index: 10;
+	top: 0.5rem;
+	right: 2.8rem;
+	color: var(--var-secoudary-color-text);
+
+}
+
+/*  */
+.one-produit .btn-fermer p {
+	width: 4rem;
+	height: 2rem;
+	background-color: #ed1616dc; 
+	font-size: 0.8rem;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	color: #ffffff;
+	padding-left: 1rem;
+	z-index: 2;
+}
+
+/* Utilisation de la pseudo classe backdrop pour afficher l'arrière-plan de la boite dialog */
+dialog::backdrop {
+	backdrop-filter: blur(5px);
+
+}
+.one-produit .dialog-menu {
+	width: 80rem;
+	height: 31rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid blue; */
+}
+
+.dialog-menu .produit-page{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid red; */
+	width: 98%;
+	gap: 3rem;
+	/* margin-bottom: 0.5rem; */
+	margin: auto;
+}
+
+.produit-page .gauche {
+	width: 25rem;
+	height: 25rem;
+	background-color: var(--var-color-text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: 2px 5px 10px rgba(140, 137, 137, 0.6);
+	
+	/* border: 2px solid green; */
+}
+
+.gauche img {
+	width: 20rem;
+	height: 20rem;
+	cursor: pointer;
+	transition: 0.6s ease;
+}
+
+.gauche img:hover{
+	transform: scale(1.2) translate(5%, 5%);
+}
+
+.produit-page .droite {
+	width: 50rem;
+	height: 25rem;
+	display: flex;
+	background-color: var(--var-color-text);
+	border-radius: 15px;
+	flex-direction: column;
+	justify-content:center;
+	gap: 0.5rem;
+	box-shadow: 2px 3px 5px rgba(140, 137, 137, 0.6);
+	/* border: 3px solid #d31182; */
+
+}
+
+.droite .titre {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.titre h1 {
+	/* margin-top: -2rem; */
+	font-size: 2rem;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.titre .last {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 2px solid #c90f63; */
+	right: 2.5rem;
+	top: 3rem;
+}
+
+.titre .last i {
+font-size: 1rem;
+color: yellow;
+}
+
+.titre .last p {
+	font-size: 0.9rem;
+}
+
+.droite .description {
+	/* border: 2px solid #0fc9c9; */
+	font-size:	1rem;
+	padding: 0.5rem;
+}
+
+.droite .colors{
+	/* border: 1px solid yellow; */
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.colors p {
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+.colors .color-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.color-container .color.change {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.color.change:nth-child(1) {
+	background-color: #ff0000;
+}
+
+.color.change:nth-child(2) {
+    background-color: #050578;
+}
+
+.droite .sizes {
+	/* border: 3px solid #5316b6; */
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.sizes p {
+	font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.sizes .container {
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	font-size: 0.8rem;
+}
+
+.container .size {
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+	margin: 0.1rem;
+    cursor: pointer;
+	/* border: 1px solid red; */
+	justify-content: center;
+	align-items: center;
+}
+
+.size.active {
+	border: 1px solid #101010;
+	background-color: #b2b0b6;
+}
+
+.droite .prix {
+	color: var(--var-bg-color-mix);
+	font-size: 1.3rem;
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	margin-bottom: 2rem;
+	padding-left: 1rem;
+	/* border: 1px solid blue; */
+}
+
+.produit-page .footer {
+	/* border: 3px solid black; */
+	width: 25rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 4rem;
+	gap: 1rem;
+	padding-bottom: 1rem;
+}
+
+.footer .counter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: #0000ff 1px solid; */
+	width: 5rem;
+	margin-left: 1rem;
+	gap: 0.4rem;
+}
+
+.counter i{
+	font-size: 1.1rem;
+	width: 1.3rem;
+	height: 1.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.counter .qte {
+	width: 1.2rem;
+	height: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+	/* background-color: #0000ff; */
+	padding-bottom: 0.1rem;
+}
+
+.footer .ajouter {
+	height: 3rem;
+	width: 12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 6px;
+	background-color: var(--var-bg-secoundary);
+	cursor: pointer;
+	transition: 0.6s ease;
+	font-size: 1rem;
+	color: #ffffff;
+}
+
+.ajouter .icon {
+	font-size: 1rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon i {
+	font-size: 1rem;
+}
+
+.ajouter p {
+	font-size: 1rem;
+}
+
+.ajouter.ajoute{
+	background-color: red;
+}
+
+.like i {
+	font-size: 1.5rem;
+	color: var(--var-bg-secoundary);
+}
+
+.dialog-menu .accessoire {
+	width: 78rem;
+	height: 4rem;
+	margin: auto;
+    background-color: var(--var-bg-color-d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	gap: 2rem;
+    /* border: 1px solid rgb(8, 10, 8); */
+	margin-bottom: 0.3rem;
+}
+
+.accessoire .bottom {
+	height: 4rem;
+	width: 26rem;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bottom .carte-card {
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 7px;
+	background-color: var(--var-color-text);
+	box-shadow: 2px 3px 5px rgba(140, 137, 137, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 0.2rem ;
+}
+
+.carte-card img {
+	width: 4.5rem;
+	height: 4.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.accessoire .avantage {
+	width: 50rem;
+	background-color: var(--var-color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-right: 1rem; */
+	box-shadow: 2px 3px 5px rgba(140, 137, 137, 0.6);
+	border-radius: 10px;
+}
+
+.avantage .carte-service {
+	/* border: #ff0000 1px solid; */
+	height: 3.5rem;
+	width: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.rem;
+	cursor: pointer;
+	transition: 0.6s ease;
+	/* padding-right: .3rem; */
+	padding-left: 0.3rem;
+}
+
+.carte-service .icone i {
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	border-radius: 10px;
+}
+
+.icone .fa-undo {
+	color: #ffffff;
+	background-color: #054c05;
+}
+
+.icone .fa-truck {
+	color: #ffffff;
+	background-color: #ff0000;
+}
+
+.icone .fa-credit-card {
+	color: #ffffff;
+	background-color: #0000ff;
+}
+
+.carte-service p {
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+/* ********************Responsive page **********************/
+
+@media screen and (max-width: 26.75rem) {
+	body {
+		height: 80vh;
+		margin: auto;
+		background-color: #0fe3f6e8;
+	}
+
+	main header {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 6rem;
+		/* border: 1px solid blue; */
+		gap: 1rem;
+	}
+	
+	header .logo{
+		width: 11rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem; 
+		margin-right: 10rem;
+		/* border: 1px solid blue; */
+		padding: 10px 20px;
+	}
+
+	header nav {
+		display: none;
+	}
+
+	header form {
+		padding-bottom: 4rem;
+	}	
+
+	header .actions {
+		height: 4rem;
+		width: 5rem;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		/* margin-right: 2rem; */
+		gap: 1rem;
+		top: -0.3rem;
+		right: 0px;
+		/* border: 1px solid red; */
+		z-index: 2;
+		padding: 0 5px;
+	}
+
+	main .main-content .filtre {
+		position: sticky;
+		top: 60px;
+		width: 100%;
+		height: 4rem;
+		display: flex;
+		border: 1px solid red;
+	}
+
+	main .main-content .produits {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.one-produit .dialog-menu { 
+		width: 22rem;
+		height: 40rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}  
+
+	.dialog-menu .produit-page {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		height: 35rem;
+		gap: 0.5rem;
+		margin: auto;
+	}
+
+	.produit-page .gauche {
+		width: 10rem;
+		height: 10rem;
+		background-color: var(--var-color-text);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 15px;
+		box-shadow: 2px 5px 10px rgba(140, 137, 137, 0.6);
+	}
+	
+	.gauche img {
+		width: 11rem;
+		height: 11rem;
+	}
+	
+	.produit-page .droite {
+		width: 20rem;
+		height: 18rem;
+		display: flex;
+		background-color: var(--var-color-text);
+		border-radius: 15px;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.5rem;
+		box-shadow: 2px 3px 5px #87868699;
+	/* border: 3px solid #d31182; */
+	}
+
+	.titre h1 {
+		font-size: 1.5rem;
+		padding: 1.5rem 0 0.5rem 0.5rem;
+	}
+	
+	.titre .last {
+		/* border: 2px solid #c90f63; */
+		right: 1rem;
+		top: 3.2rem;
+	}
+	.droite .prix {
+		height: 2rem;
+		margin-bottom: 0.1rem;
+	}
+	.produit-page .footer {
+		/* border: 3px solid black; */
+		width: 20rem;
+		height: 4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 0.5rem 0.1rem;
+		gap: 0.3rem;
+		padding: 2rem 2rem 2rem 0;
+		/* position: absolute; */
+		/* /* bottom: 2rem;  */
+	}
+	
+	.dialog-menu .accessoire {
+		width: 20rem;
+		height: 12rem;
+    	display: flex;
+		flex-direction: column;
+    	justify-content: center;
+   	 	align-items: center;
+		gap: 0.2rem;
+		margin-bottom: 0.3rem;
+	}
+
+	.accessoire .bottom {
+		display: none;
+	}
+
+	.accessoire .avantage {
+		width: 20rem;
+		background-color: var(--var-color-text);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 2px 3px 5px rgba(140, 137, 137, 0.6);
+		border-radius: 10px;
+	}
+
+	
+	.avantage .carte-service {
+		/* border: #ff0000 1px solid; */
+		height: 3rem;
+		width: 18rem;
+		justify-content: flex-start;
+		gap: 0.3rem;
+	}
+
+	.carte-service .icone i {
+		width: 2rem;
+		height: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+		border-radius: 10px;
+	}
+
+}
+
+@media (48rem <= width <= 54.25rem) {
+	
+	  body {
+		height: 90vh;
+	} 
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;	
+	}
+
+	header form button{
+		right: 0rem;
+	}
+
+	main .main-content .produits {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+
+
+
+
+
+
+
+
+
+	
+	
+} 

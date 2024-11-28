@@ -1,0 +1,16 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "server": "http-server",
+    "start": "npm run server",  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Langevin Goa",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
