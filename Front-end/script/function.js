@@ -154,7 +154,7 @@ export const choisirTaille = () => {
 	//  Ajout de la class active sur la taille cliquée
 	tabsize.classList.add("active");
 
-	// Affichage du prix en fonction de la taille
+	Affichage du prix en fonction de la taille
 
 	const prix = document.querySelector("prix");
 
@@ -175,7 +175,7 @@ export const choisirTaille = () => {
 			prix.textContent = currentProduct.prixXS;
 			break;	
 		default :
-            prix.textContent = cirrentProduct.prixS;
+            prix.textContent = currentProduct.prixS;
 		    break;				
 	}
 }
