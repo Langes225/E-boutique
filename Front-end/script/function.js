@@ -142,3 +142,40 @@ export const testerSiProduitExiste = (arr, product) => {
 	const el = arr.find(p => p.id === product.id)
 	return el ? true : false;
 }
+
+// Création d'une fonction pour choisir la taille du produit
+
+export const choisirTaille = () => {
+	// Suppression de la class active sur la taille précédente
+	const sizeActive = document.querySelector(".size.active");
+	if(sizeActive) {
+		sizeActive.classList.remove("active");
+	}
+	//  Ajout de la class active sur la taille cliquée
+	tabsize.classList.add("active");
+
+	// Affichage du prix en fonction de la taille
+
+	const prix = document.querySelector("prix");
+
+	switch (tabsize.textContent) {
+		case 'S':
+			prix.textContent = currentProduct.prixS;
+			break;
+		case 'M':
+			prix.textContent = currentProduct.prixM;
+			break;
+		case 'L':
+			prix.textContent = currentProduct.prixL;
+			break;
+		case 'XL':
+			prix.textContent = currentProduct.prixXL;
+			break;
+		case 'XS':
+			prix.textContent = currentProduct.prixXS;
+			break;	
+		default :
+            prix.textContent = cirrentProduct.prixS;
+		    break;				
+	}
+}
