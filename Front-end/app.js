@@ -1,4 +1,4 @@
-import { generateArticle, genererUnProduit, testerSiProduitExiste, choisirTaille } from './script/function.js';
+import { generateArticle, genererUnProduit, testerSiProduitExiste } from './script/function.js';
 
 const response = await fetch("http://localhost:8081/chapeaux");
 const data = await response.json();
@@ -148,9 +148,41 @@ listCarteProduits.forEach((product) => {
 		const tabSizes = document.querySelectorAll(".size");
 		console.log(tabSizes);
 
-		tabSizes.forEach(tabsize => {
+		tabSizes.forEach((tabsize) => {
 
-			tabsize.addEventListener("click", choisirTaille())
+		tabsize.addEventListener("click", () => {
+			// Suppression de la class active précédente
+			const sizeActive = document.querySelector(".size.active");
+			if (sizeActive) {
+				sizeActive.classList.remove("active");
+			}
+			tabsize.classList.add("active");
+			
+			//Affichage du prix en fonction de la taille du produit
+			const prix = document.querySelector(".prix");
+
+			switch(tabsize.textContent) {
+				case 'S':
+					prix.textContent = currentProduct.prixS;
+					break;
+				case 'M':
+					prix.textContent = currentProduct.prixM;
+					break;	
+				case 'L':
+					prix.textContent = currentProduct.prixL;
+					break;
+				case 'XL':
+					prix.textContent = currentProduct.prixXL;
+					break;
+				case 'XS':
+					prix.textContent = currentProduct.prixXS;
+					break;
+				default :
+					prix.textContent = currentProduct.prixS;
+					break;
+			}
+
+		})
 		});
 		
 		const stock = document.querySelector(".qte");
@@ -205,7 +237,6 @@ listCarteProduits.forEach((product) => {
 
 	});
 });
-
 
 // Bouton pour fermer la boite de dialogue
 const btnFermer = document.querySelector(".btn-fermer");
