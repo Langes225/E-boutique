@@ -145,37 +145,37 @@ export const testerSiProduitExiste = (arr, product) => {
 
 // Création d'une fonction pour choisir la taille du produit
 
-export const choisirTaille = () => {
+export const choisirTaille = (tabS) => {
 	// Suppression de la class active sur la taille précédente
 	const sizeActive = document.querySelector(".size.active");
-	if(sizeActive) {
+	if(sizeActive){
 		sizeActive.classList.remove("active");
 	}
 	//  Ajout de la class active sur la taille cliquée
-	tabsize.classList.add("active");
+	tabS.classList.add("active");
 
-	Affichage du prix en fonction de la taille
+	// Affichage du prix en fonction de la taille
 
-	const prix = document.querySelector("prix");
+	// const prix = document.querySelector("prix");
 
-	switch (tabsize.textContent) {
-		case 'S':
-			prix.textContent = currentProduct.prixS;
-			break;
-		case 'M':
-			prix.textContent = currentProduct.prixM;
-			break;
-		case 'L':
-			prix.textContent = currentProduct.prixL;
-			break;
-		case 'XL':
-			prix.textContent = currentProduct.prixXL;
-			break;
-		case 'XS':
-			prix.textContent = currentProduct.prixXS;
-			break;	
-		default :
-            prix.textContent = currentProduct.prixS;
-		    break;				
-	}
+	// switch (tabsize.textContent) {
+	// 	case 'S':
+	// 		prix.textContent = currentProduct.prixS;
+	// 		break;
+	// 	case 'M':
+	// 		prix.textContent = currentProduct.prixM;
+	// 		break;
+	// 	case 'L':
+	// 		prix.textContent = currentProduct.prixL;
+	// 		break;
+	// 	case 'XL':
+	// 		prix.textContent = currentProduct.prixXL;
+	// 		break;
+	// 	case 'XS':
+	// 		prix.textContent = currentProduct.prixXS;
+	// 		break;	
+	// 	default :
+    //         prix.textContent = currentProduct.prixS;
+	// 	    break;				
+	// }
 }

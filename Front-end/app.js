@@ -148,9 +148,11 @@ listCarteProduits.forEach((product) => {
 		const tabSizes = document.querySelectorAll(".size");
 		console.log(tabSizes);
 
-		tabSizes.forEach(tabsize => {
+		const sizeActive = document.querySelector(".size.active");
 
-			tabsize.addEventListener("click", choisirTaille())
+		tabSizes.forEach((tabsize) => {
+
+			tabsize.addEventListener("click", choisirTaille(tabsize))
 		});
 		
 		const stock = document.querySelector(".qte");
