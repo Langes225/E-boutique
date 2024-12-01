@@ -1,5 +1,5 @@
 .hintrc
-/Back-end/api-http/node_modules/
-/Front-end/node_modules/
+/Back-end/api-http/node_modules
+/Front-end/node_modules
 
 
