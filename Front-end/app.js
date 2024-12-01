@@ -156,6 +156,7 @@ listCarteProduits.forEach((product) => {
 			if (sizeActive) {
 				sizeActive.classList.remove("active");
 			}
+			// Ajout de la classe active sur la taille indexée
 			tabsize.classList.add("active");
 			
 			//Affichage du prix en fonction de la taille du produit
