@@ -148,42 +148,41 @@ listCarteProduits.forEach((product) => {
 		const tabSizes = document.querySelectorAll(".size");
 		console.log(tabSizes);
 
-		tabSizes.forEach((tabsize) => {
+		tabSizes.forEach(tabsize => {
 
-		tabsize.addEventListener("click", () => {
-			// Suppression de la class active précédente
-			const sizeActive = document.querySelector(".size.active");
-			if (sizeActive) {
-				sizeActive.classList.remove("active");
-			}
-			// Ajout de la classe active sur la taille indexée
-			tabsize.classList.add("active");
-			
-			//Affichage du prix en fonction de la taille du produit
-			const prix = document.querySelector(".prix");
+			tabsize.addEventListener("click", () => {
+				// Suppression de la classe 'active' sur la tabsize précédent
+				const sizeActive = document.querySelector(".size.active");
+				if (sizeActive) {
+					sizeActive.classList.remove("active");
+				}
+				// Ajout de la classe 'active' sur la tabsize indiquée
+				tabsize.classList.add("active");
 
-			switch(tabsize.textContent) {
-				case 'S':
-					prix.textContent = currentProduct.prixS;
-					break;
-				case 'M':
-					prix.textContent = currentProduct.prixM;
-					break;	
-				case 'L':
-					prix.textContent = currentProduct.prixL;
-					break;
-				case 'XL':
-					prix.textContent = currentProduct.prixXL;
-					break;
-				case 'XS':
-					prix.textContent = currentProduct.prixXS;
-					break;
-				default :
-					prix.textContent = currentProduct.prixS;
-					break;
-			}
+				// Afiichage du prix en fonction de la taille
+				const prix = document.querySelector(".prix");
 
-		})
+				switch (tabsize.textContent) {
+					case "S":
+						prix.textContent = currentProduct.prixS;
+						break;
+					case "M":
+						prix.textContent = currentProduct.prixM;
+						break;
+					case "L":
+						prix.textContent = currentProduct.prixL;
+						break;		
+					case "XL":
+						prix.textContent = currentProduct.prixXL;
+						break;
+					case "XS":
+						prix.textContent = currentProduct.prixXS;
+						break;
+					default :
+						prix.textContent = currentProduct.prixS;
+						break;	
+				}
+			})
 		});
 		
 		const stock = document.querySelector(".qte");
