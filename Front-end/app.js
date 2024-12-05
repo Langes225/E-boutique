@@ -150,7 +150,24 @@ listCarteProduits.forEach((product) => {
 
 		tabSizes.forEach(tabsize => {
 
-			tabsize.addEventListener("click", choisirTaille())
+			tabsize.addEventListener("click", () => {
+				// Suppression de la classe 'active' sur la tabsize précédent
+				const sizeActive = document.querySelector(".size.active");
+				if (sizeActive) {
+					sizeActive.classList.remove("active");
+				}
+				// Ajout de la classe 'active' sur la tabsize indiquée
+				tabsize.classList.add("active");
+
+				// Afiichage du prix en fonction de la taille
+				const prix = document.querySelector(".prix");
+
+				switch (tabsize.textContent) {
+					case "S":
+						prix.textContent = tabsize.prixS;
+						break;
+				}
+			})
 		});
 		
 		const stock = document.querySelector(".qte");
