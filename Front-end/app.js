@@ -164,8 +164,23 @@ listCarteProduits.forEach((product) => {
 
 				switch (tabsize.textContent) {
 					case "S":
-						prix.textContent = tabsize.prixS;
+						prix.textContent = currentProduct.prixS;
 						break;
+					case "M":
+						prix.textContent = currentProduct.prixM;
+						break;
+					case "L":
+						prix.textContent = currentProduct.prixL;
+						break;		
+					case "XL":
+						prix.textContent = currentProduct.prixXL;
+						break;
+					case "XS":
+						prix.textContent = currentProduct.prixXS;
+						break;
+					default :
+						prix.textContent = currentProduct.prixS;
+						break;	
 				}
 			})
 		});
