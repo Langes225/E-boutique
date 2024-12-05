@@ -1,4 +1,4 @@
-import { generateArticle, genererUnProduit, testerSiProduitExiste, choisirTaille } from './script/function.js';
+import { generateArticle, genererUnProduit, testerSiProduitExiste } from './script/function.js';
 
 const response = await fetch("http://localhost:8081/chapeaux");
 const data = await response.json();
@@ -148,11 +148,9 @@ listCarteProduits.forEach((product) => {
 		const tabSizes = document.querySelectorAll(".size");
 		console.log(tabSizes);
 
-		const sizeActive = document.querySelector(".size.active");
+		tabSizes.forEach(tabsize => {
 
-		tabSizes.forEach((tabsize) => {
-
-			tabsize.addEventListener("click", choisirTaille(tabsize))
+			tabsize.addEventListener("click", choisirTaille())
 		});
 		
 		const stock = document.querySelector(".qte");
@@ -207,7 +205,6 @@ listCarteProduits.forEach((product) => {
 
 	});
 });
-
 
 // Bouton pour fermer la boite de dialogue
 const btnFermer = document.querySelector(".btn-fermer");
